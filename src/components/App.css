@@ -94,10 +94,15 @@ a {
 }
 
 .error {
+  background-color: rgba(208, 205, 205, 0.6);
+  border-radius: 15px;
+  height: 40px;
+  margin: 5px;
+  align-items: center;
+  cursor: pointer;
   display: flex;
-  text-align: center;
-  font-size: 10px;
-  padding: 2px;
+  font-size: 15px;
+  padding: 5px 20px;
 }
 
 .empty-item {

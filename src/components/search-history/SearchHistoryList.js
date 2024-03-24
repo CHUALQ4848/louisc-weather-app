@@ -7,7 +7,7 @@ const SearchHistoryList = ({searchHist, onDeleteHist, onSearchHist}) => {
              <label className="description">
                     {searchHist.searchDate}
                   </label>
-                  {/* <label className="min-max"> */}
+                  
                   <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

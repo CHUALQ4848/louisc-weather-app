@@ -8,12 +8,7 @@ const Search = ({ onAddQuery }) => {
       onAddQuery(query);
       // setQuery("");
     }
-    // function handleClear() {
-    //   // e.preventDefault
-    //   setQuery("")
-    //   console.log(query)
-    //   onAddQuery(query)
-    // }
+    
     return (
   
       <form onSubmit={handleSearch} className="search">

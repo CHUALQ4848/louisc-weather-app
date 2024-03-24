@@ -12,34 +12,28 @@ import { newSearchHist } from "./helper/HelperFunctions";
 import { useWeather } from "./hooks/useWeather";
 
 
-//TODO: Push code to github
-//      env issue
-//      create file for api url and key
-
-
 export default function App() {
   const [query, setQuery] = useState("");
   const {weather, isLoading, error} = useWeather(query)
   const [searchHistory, setSearchHistory] = useState([])
-
+  // to handle query based on the search
   const handleQuery = (result) => {
     setQuery(result)
     fetchSearchHist()
     // console.log(query)
   }
-
+  // to handle search record into search history
   const fetchSearchHist = () => {
     if (weather.length === 0) return
     const searchHist = newSearchHist(weather)
-    console.log(searchHist)
     const isDuplicate = searchHistory.some((search) => search.id === searchHist.id)
     if (!isDuplicate) setSearchHistory((searchHistory) => [...searchHistory, searchHist]);
   }
- 
+  // handle deletetion on search history
   const handleDeletedHist = (id) => {
     setSearchHistory(searchHistory.filter((search) => search.id !== id))
   }
-  console.log(searchHistory)
+
   return(
     <>
     <Main>

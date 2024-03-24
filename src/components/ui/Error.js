@@ -1,8 +1,8 @@
 const Error = ({message}) => {
     return (
-        <p className="error">
+        <div className="error">
           <span>⛔️</span> {message}
-        </p>
+        </div>
       );
 }
 export default Error

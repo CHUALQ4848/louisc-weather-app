@@ -1,5 +1,4 @@
 import {convertDegrees} from "../helper/HelperFunctions"
-import moment from "moment"
 import "./DailyWeather.css";
 
 const DailyWeather = (weather) => {
@@ -7,17 +6,14 @@ const DailyWeather = (weather) => {
     let data = weather
     // console.log(data)
     if (data.weather.length === 0) return
-    // console.log(data)
-    // console.log(data.weather.length)
     if (data.weather.list.length > 0) {
-       // console.log(data.weather.list)
     let description = data.weather.list[0].weather[0].description
     let mainWeather = data.weather.list[0].weather[0].main
     let icon = data.weather.list[0].weather[0].icon
     let countryCities = `${data.weather.city.name}, ${data.weather.city.country}`
-    let current_temprature = `${convertDegrees(data.weather.list[0].main.temp, "C")}°C`
-    let humidity = `${data.weather.list[0].main.humidity}%`
-    let datetime = moment().format('Do MMM YYYY hh:mm a')
+    let currentTemp = `${convertDegrees(data.weather.list[0].main.temp, "C")}°C`
+    let humidity = `Humidity: ${data.weather.list[0].main.humidity}%`
+    let tempHighLow = `H:${convertDegrees(data.weather.list[0].main.temp_max, "C")}°C L:${convertDegrees(data.weather.list[0].main.temp_min, "C")}°C`
 
     return (
         <div className="weather">
@@ -37,7 +33,7 @@ const DailyWeather = (weather) => {
         </div>
         <div className="bottom">
           <p className="temperature">
-            {current_temprature}
+            {currentTemp}
           </p>
           <div className="details">
             <div className="parameter-row">
@@ -45,7 +41,6 @@ const DailyWeather = (weather) => {
             </div>
        
             <div className="parameter-row">
-              <span className="parameter-label">Humidity</span>
               <span className="parameter-value">{humidity}</span>
             </div>
             <div className="parameter-row">
@@ -54,7 +49,7 @@ const DailyWeather = (weather) => {
             </div>
             <div className="parameter-row">
               
-              <span className="parameter-value">{datetime}</span>
+              <span className="parameter-value">{tempHighLow}</span>
             </div>
           </div>
         </div>

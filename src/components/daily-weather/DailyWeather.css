@@ -61,11 +61,6 @@
     justify-content: space-between;
   }
   
-  .parameter-label {
-    text-align: left;
-    font-weight: 400;
-    font-size: 12px;
-  }
   
   .parameter-value {
     text-align: right;
@@ -78,9 +73,6 @@
     font-weight: 900;
   }
   
-  .parameter-label.top {
-    border-bottom: 1px solid #fff;
-  }
   
   .tool-tip {
     color: #282828;
