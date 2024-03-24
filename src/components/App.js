@@ -9,7 +9,7 @@ import Loader from "./ui/Loader";
 import Error from "./ui/Error";
 import Empty from "./ui/Empty";
 import { newSearchHist } from "./helper/HelperFunctions";
-import { useWeather } from "./hooks/useWeather";
+import useWeather  from "./hooks/useWeather";
 
 
 export default function App() {

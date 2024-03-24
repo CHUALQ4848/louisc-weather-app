@@ -3,14 +3,13 @@ import axios from "axios";
 import { useState , useEffect } from "react";
 import { City } from 'country-state-city'
 import { apiKey, apiURL } from "../helper/ApiHelper";
- export function useWeather(query) {
+ const useWeather = (query) => {
     const [weather, setWeather] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
      
     // console.log("useweather")
-    useEffect(
-        function() {
+    useEffect(() => {
             async function fetchWeather() {
                 try {
                   setIsLoading(true);
@@ -53,3 +52,4 @@ import { apiKey, apiURL } from "../helper/ApiHelper";
     return {weather, isLoading, error}
 
 }
+export default useWeather
