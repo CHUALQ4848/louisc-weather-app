@@ -1,0 +1,145 @@
+a {
+  text-decoration: none;
+  color: #226f14;
+  font-weight: 700;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100svh;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1080px;
+  margin: 20px auto;
+}
+
+.css-b62m3t-container {
+  width: 600px;
+}
+.logo-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+.logo-container img {
+  width: 50px;
+  height: auto;
+}
+
+.logo-title {
+  font-size: 1.5em;
+  color: #ebebeb;
+  font-weight: 300;
+}
+.search {
+  display: flex;
+  align-items: center;
+  width: 420px;
+  background-color: rgba(208, 205, 205, 0.6);
+  padding: 15px;
+  border-radius: 100px;
+  place-self: center;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .search {
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .search {
+    margin-bottom: 50px;
+  }
+}
+
+.searchInput {
+  border: none;
+  outline-width: 0;
+  background-color: transparent;
+  color: #020202;
+  flex: 0.9;
+  font-size: 15px;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+  color: #101010;
+  flex: 0.1;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 12px;
+  padding-bottom: 18px;
+  padding-top: 6px;
+  background-color: #f2f2f286;
+  border-radius: 8px 8px 0 0;
+}
+
+.error {
+  display: flex;
+  text-align: center;
+  font-size: 10px;
+  padding: 2px;
+}
+
+.empty-item {
+  background-color: rgba(208, 205, 205, 0.6);
+  border-radius: 15px;
+  height: 40px;
+  margin: 5px;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-size: 15px;
+  padding: 5px 20px;
+}
+
+.empty {
+  display: flex;
+  text-align: center;
+  font-size: 15px;
+  /* padding: 2px; */
+}
+
+@media (max-width: 768px) {
+  .css-b62m3t-container {
+    width: 380px;
+  }
+
+  .logo-container {
+    justify-content: center;
+  }
+
+  .search {
+    width: 320px;
+  }
+}
+
+@media (max-width: 375px) {
+  .css-b62m3t-container {
+    width: 300px;
+  }
+
+  .app-container {
+    gap: 0em;
+    max-width: 300px;
+  }
+}
